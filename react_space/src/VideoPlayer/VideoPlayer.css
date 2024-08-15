@@ -1,0 +1,46 @@
+.video-container {
+    position: relative;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .video-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .video-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .play-button:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .play-button svg {
+    fill: white;
+  }
+  

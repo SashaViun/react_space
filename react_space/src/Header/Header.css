@@ -1,0 +1,92 @@
+li {
+    z-index: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Rubik;
+    margin: 45px;
+}
+
+.logo {
+    margin: 15px;
+}
+
+.contact {
+    margin: 15px;
+}
+
+.header {
+    display:flex;
+    gap: 65px;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    outline: none;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+  }
+  
+  .button:disabled {
+    pointer-events: none;
+  }
+  
+  .button:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
+  }
+  
+  .button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .content.fixed button {
+    background-color: black;
+    color: white;
+  }
+/* 
+.diveDeep {
+    margin-top: -140px;
+    z-index: 0;
+    color: white;
+    border: solid 1px;
+    border-radius: 40px;
+    border-color: #3f3f3f;
+    padding: 200px 200px 200px 35px;
+    text-align: left;
+    font-family: Rubik;
+    font-weight:bolder;
+    font-size: 50px;
+    text-align: left;
+}
+ */
