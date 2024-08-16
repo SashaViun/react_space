@@ -34,3 +34,10 @@
     font-weight: 700;
     font-size: 50px;
 }
+
+.video {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+  

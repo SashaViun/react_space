@@ -1,8 +1,9 @@
 import React from 'react';
+import './VideoPlayer.css'
 
-interface VideoComponentProps {
-  videoSrc: string;
-  videoType: string;
+interface VideoPlayerProps {
+  src: string;
+  type?: string;
   controls?: boolean;
   autoPlay?: boolean;
   loop?: boolean;
@@ -10,9 +11,9 @@ interface VideoComponentProps {
   className?: string;
 }
 
-const VideoComponent: React.FC<VideoComponentProps> = ({
-  videoSrc,
-  videoType = 'video/mp4',
+const VideoPlayer: React.FC<VideoPlayerProps> = ({
+  src,
+  type = 'video/mp4',
   controls = true,
   autoPlay = false,
   loop = false,
@@ -20,18 +21,17 @@ const VideoComponent: React.FC<VideoComponentProps> = ({
   className = '',
 }) => {
   return (
-    <div className={`video-container ${className}`}>
-      <video
-        src={videoSrc}
-        type={videoType}
-        controls={controls}
-        autoPlay={autoPlay}
-        loop={loop}
-        muted={muted}
-        className="w-full h-auto"
-      />
-    </div>
+    <video
+      className={className}
+      controls={controls}
+      autoPlay={autoPlay}
+      loop={loop}
+      muted={muted}
+    >
+      <source src={src} type={type} />
+      Your browser does not support the video tag.
+    </video>
   );
 };
 
-export default VideoComponent;
+export default VideoPlayer;

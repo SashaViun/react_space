@@ -1,11 +1,25 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css'
 import Header from "./Header/Header";
-import RocketCarousel from './RocketCarousel/RocketCarousel';
+import MultipleItems from './RocketCarousel/RocketCarousel';
 import RocketDetails from './RocketDetails/RocketDetails';
-import CustomVideoPlayer from './VideoPlayer/VideoPlayer';
+import AstronautCarousel from './AstronautCard/AstonautCarousel';
 import Frame2 from './Frame2.png'
 import Frame325 from './Frame 325.png'
+
+const astronauts = [
+    {
+      image: 'path-to-image1',
+      name: 'Dave Johnson',
+      role: 'St. Mechanic',
+    },
+    {
+      image: 'path-to-image2',
+      name: 'Jane Doe',
+      role: 'Engineer',
+    },
+    // Add more astronauts as needed
+  ];
 
 function App() {
     return (
@@ -24,7 +38,7 @@ function App() {
             <Routes>
                 <Route path='/'element={
                     <div className='AppDiv'>
-                      <RocketCarousel/>
+                      <MultipleItems/>
                     </div>
                 } />
             </Routes>
@@ -40,7 +54,17 @@ function App() {
         <div className='about'>
             ABOUT US
         </div>
-        <CustomVideoPlayer videoSrc="https://www.youtube.com/watch?v=921VbEMAwwY&t=1s" />
+        <div className='video'>
+        <iframe width="1321px" height="536px" src="https://www.youtube.com/embed/921VbEMAwwY?si=D16q75wSf7yGEoI9" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" style={{
+        borderRadius: '20px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+        overflow: 'hidden',
+      }}></iframe>
+        </div>
+    <div>
+        <h1>TEAM</h1>
+      <AstronautCarousel astronauts={astronauts} />
+    </div>
         </div>
         </>
     )

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './RocketDetails.css';
+import Rocket from './Rocket.gif'
 
 interface RocketData {
     name: string;
@@ -51,18 +52,28 @@ const RocketDetails: React.FC = () => {
     if (!rocketData) return <div>Loading...</div>;
 
     return (
+        <>
+        <h1 className='rocket-name'>{rocketData.name.toUpperCase()}</h1>
         <div className="rocket-details">
-            <h1>{rocketData.name.toUpperCase()}</h1>
+            <div>
+                <img src={Rocket} alt="rocket" className='image-content'/>
+            </div>
             <div className="rocket-info">
+            <h2>{rocketData.name.toUpperCase()}</h2>
                 <p>HEIGHT: {rocketData.height_w_trunk.meters} M / {rocketData.height_w_trunk.feet} FT</p>
                 <p>DIAMETER: {rocketData.diameter.meters} M / {rocketData.diameter.feet} FT</p>
                 <p>SPACECRAFT VOLUME: {rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p>
                 <p>TRUNK VOLUME: {rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p>
                 <p>LAUNCH PAYLOAD MASS: {rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p>
+                <p>TRUNK VOLUME: {rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p>
+                <p>LAUNCH PAYLOAD MASS: {rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p>
                 <p>RETURN PAYLOAD MASS: {rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p>
-                {/* Додайте додаткові деталі, які потрібно відобразити */}
+                <p>RETURN PAYLOAD MASS: {rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p>
+                <p>SPACECRAFT VOLUME: {rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p>
+                <p>RETURN PAYLOAD MASS: {rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p>
             </div>
         </div>
+        </>
     );
 }
 

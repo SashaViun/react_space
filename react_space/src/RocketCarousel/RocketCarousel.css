@@ -1,6 +1,18 @@
-.container {
-   display: flex;
-   justify-content:space-around;
+.slider-container {
    padding: 10px;
+   display: flex;
+   justify-content: center;
 }
 
+.slick-list {
+   width: 100vw;
+}
+
+.slick-track {
+   display: flex;
+   justify-content: center;
+}
+
+.slick-dots {
+  background-color: gray;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './RocketCard.css';
-import Rocket from './Rocket.png'
+import Rocket from './Rocket.gif'
 
 interface RocketData {
     name: string;

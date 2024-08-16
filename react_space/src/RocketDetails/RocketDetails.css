@@ -1,11 +1,28 @@
 .rocket-details {
     padding: 40px;
     color: white;
+    font-family: Rubik;
+    border: 1px solid gray;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+    transition: 2s;
 }
 
-.rocket-info {
-    margin-top: 20px;
-    font-size: 1.2em;
-    line-height: 1.5em;
+
+.rocket-name {
+    color: white;
     font-family: Rubik;
+    font-size: 50px;
+} 
+
+.image-content {
+    margin-left: 10px;
+    width: 791px;
+    height: 457px;
+    border: 1px solid gray;
+    border-radius: 50px;
 }
