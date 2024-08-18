@@ -1,21 +1,21 @@
-import React from 'react';
-import Astronaut from './Astronaut.png'
 import './AstronautCard.css'
+import Astronaut from './Astronaut.png'
 
-interface AstronautCardProps {
-  image: string;
-  name: string;
-  role: string;
-}
+interface CardComponentProps {
+    title: string;
+    name: string;
+  }
+  
+  const AstronautCard: React.FC<CardComponentProps> = ({ title, name }) => {
+    return (
+      <div className="card">
+        <img src={Astronaut} alt={'astro'} className="card-image" />
+        <div className="card-text">
+          <h3 className="card-title">{title}</h3>
+          <h2 className="card-name">{name}</h2>
+        </div>
+      </div>
+    );
+  }
 
-const AstronautCard: React.FC<AstronautCardProps> = ({ name, role }) => {
-  return (
-    <div className="astronaut-card">
-      <img src={Astronaut} alt={name} className="astronaut-image" />
-      <h3 className="astronaut-role">{role}</h3>
-      <p className="astronaut-name">{name}</p>
-    </div>
-  );
-};
-
-export default AstronautCard;
+export default AstronautCard

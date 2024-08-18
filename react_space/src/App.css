@@ -21,6 +21,7 @@
 
 .launches {
     display: flex;
+    margin: 40px;
     margin-top: 50px;
     padding-left: 50px;
     padding-right: 50px;

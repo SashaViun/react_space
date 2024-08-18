@@ -1,0 +1,72 @@
+/* TeamSlider.css */
+.team-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 50px;
+  }
+  
+  .team-text {
+    max-width: 50%;
+    margin-top: -200px;
+    margin-left: 70px;
+  }
+  
+  .team-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: -70px;
+  }
+  
+  .team-description {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  .team_carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    right: 58px;
+  }
+  
+  .team_carousel {
+    display: flex;
+    justify-content: center;
+    width: 350px; /* Adjust based on card size */
+  }
+  
+  .team_carousel-buttons {
+    position: absolute;
+    bottom: -5px;
+    right: 1080px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .team_carousel-button {
+    background-color: gray;
+    border: none;
+    color: black;
+    font-size: 24px;
+    width: 126px;
+    height: 126px;
+    cursor: pointer;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .team_carousel-button:hover {
+    background-color: white;
+  }
+  
+  .team_carousel-button:focus {
+    outline: none;
+  }
+  

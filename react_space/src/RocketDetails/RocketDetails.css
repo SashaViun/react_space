@@ -2,8 +2,8 @@
     padding: 40px;
     color: white;
     font-family: Rubik;
-    border: 1px solid gray;
-    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,10 +19,52 @@
     font-size: 50px;
 } 
 
+.rocket-info_d{
+    display: grid;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.rocket-info_d h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.rocket-info_d div {
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add a grey line */
+    padding-bottom: 5px; /* Optional: Adds space between text and the line */
+}
+
+.rocket_info_d_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.rocket-info_d div:not(:last-child) {
+    margin-bottom: 5px; /* Adds space between paragraphs */
+}
+
+.rocket-info_d div:last-child {
+    border-bottom: none; /* Remove the border from the last paragraph */
+}
+
+.rocket_info_d_container p {
+    margin: 0;
+}
+
 .image-content {
-    margin-left: 10px;
+    /* margin-left:1px; */
     width: 791px;
     height: 457px;
-    border: 1px solid gray;
-    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
 }

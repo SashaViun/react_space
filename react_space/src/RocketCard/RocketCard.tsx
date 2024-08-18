@@ -1,61 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 import './RocketCard.css';
 import Rocket from './Rocket.gif'
-
-interface RocketData {
-    name: string;
-    height_w_trunk: {
-        meters: number;
-        feet: number;
-    };
-    diameter: {
-        meters: number;
-        feet: number;
-    };
-    pressurized_capsule: {
-        payload_volume: {
-            cubic_meters: number;
-            cubic_feet: number;
-        };
-    };
-    trunk: {
-        trunk_volume: {
-            cubic_meters: number;
-            cubic_feet: number;
-        };
-    };
-    launch_payload_mass: {
-        kg: number;
-        lb: number;
-    };
-    return_payload_mass: {
-        kg: number;
-        lb: number;
-    };
-}
+import { RocketData } from '../RocketCarousel/RocketCarousel';
 
 interface RocketCardProps {
-    rocketIndex: number;
+    rocketData: RocketData;
+    handleCardClick: () => void;
 }
 
-const RocketCard: React.FC<RocketCardProps> = ({ rocketIndex }) => {
-    const [rocketData, setRocketData] = useState<RocketData | null>(null);
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        fetch('https://api.spacexdata.com/v4/dragons')
-            .then((response) => response.json())
-            .then((data) => {
-                setRocketData(data[rocketIndex]);
-            })
-            .catch((error) => console.error('Error fetching rocket data:', error));
-    }, [rocketIndex]);
-
-    const handleCardClick = () => {
-        navigate(`/rocket/${rocketIndex}`);
-    };
-
+const RocketCard: React.FC<RocketCardProps> = ({ rocketData, handleCardClick}) => {
     if (!rocketData) return <div>Loading...</div>;
 
     return (
@@ -65,12 +18,12 @@ const RocketCard: React.FC<RocketCardProps> = ({ rocketIndex }) => {
             </div>
             <div className="rocket-info">
                 <h2>{rocketData.name.toUpperCase()}</h2>
-                <p>HEIGHT: {rocketData.height_w_trunk.meters} M / {rocketData.height_w_trunk.feet} FT</p>
-                <p>DIAMETER: {rocketData.diameter.meters} M / {rocketData.diameter.feet} FT</p>
-                <p>SPACECRAFT VOLUME: {rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p>
-                <p>TRUNK VOLUME: {rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p>
-                <p>LAUNCH PAYLOAD MASS: {rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p>
-                <p>RETURN PAYLOAD MASS: {rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p>
+                <div className='rocket_info_container'><p>HEIGHT:</p><p>{rocketData.height_w_trunk.meters} M / {rocketData.height_w_trunk.feet} FT</p></div>
+                <div className='rocket_info_container'><p>DIAMETER:</p><p>{rocketData.diameter.meters} M / {rocketData.diameter.feet} FT</p></div>
+                <div className='rocket_info_container'><p>SPACECRAFT VOLUME:</p><p>{rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p></div>
+                <div className='rocket_info_container'><p>TRUNK VOLUME:</p><p>{rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p></div>
+                <div className='rocket_info_container'><p>LAUNCH PAYLOAD MASS:</p><p>{rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p></div>
+                <div className='rocket_info_container'><p>RETURN PAYLOAD MASS:</p><p>{rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p></div>
             </div>
         </div>
     );

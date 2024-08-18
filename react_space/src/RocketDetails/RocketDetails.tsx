@@ -58,19 +58,19 @@ const RocketDetails: React.FC = () => {
             <div>
                 <img src={Rocket} alt="rocket" className='image-content'/>
             </div>
-            <div className="rocket-info">
+            <div className="rocket-info_d">
             <h2>{rocketData.name.toUpperCase()}</h2>
-                <p>HEIGHT: {rocketData.height_w_trunk.meters} M / {rocketData.height_w_trunk.feet} FT</p>
-                <p>DIAMETER: {rocketData.diameter.meters} M / {rocketData.diameter.feet} FT</p>
-                <p>SPACECRAFT VOLUME: {rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p>
-                <p>TRUNK VOLUME: {rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p>
-                <p>LAUNCH PAYLOAD MASS: {rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p>
-                <p>TRUNK VOLUME: {rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p>
-                <p>LAUNCH PAYLOAD MASS: {rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p>
-                <p>RETURN PAYLOAD MASS: {rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p>
-                <p>RETURN PAYLOAD MASS: {rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p>
-                <p>SPACECRAFT VOLUME: {rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p>
-                <p>RETURN PAYLOAD MASS: {rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p>
+                <div className='rocket_info_container'><p>HEIGHT:</p><p>{rocketData.height_w_trunk.meters} M / {rocketData.height_w_trunk.feet} FT</p></div>
+                <div className='rocket_info_container'><p>DIAMETER:</p><p>{rocketData.diameter.meters} M / {rocketData.diameter.feet} FT</p></div>
+                <div className='rocket_info_container'><p>SPACECRAFT VOLUME:</p><p>{rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p></div>
+                <div className='rocket_info_container'><p>TRUNK VOLUME:</p><p>{rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p></div>
+                <div className='rocket_info_container'><p>LAUNCH PAYLOAD MASS:</p><p>{rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p></div>
+                <div className='rocket_info_container'><p>TRUNK VOLUME:</p><p>{rocketData.trunk.trunk_volume.cubic_meters} M³ / {rocketData.trunk.trunk_volume.cubic_feet} FT³</p></div>
+                <div className='rocket_info_container'><p>LAUNCH PAYLOAD MASS:</p><p>{rocketData.launch_payload_mass.kg} KG / {rocketData.launch_payload_mass.lb} LBS</p></div>
+                <div className='rocket_info_container'><p>RETURN PAYLOAD MASS:</p><p>{rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p></div>
+                <div className='rocket_info_container'><p>RETURN PAYLOAD MASS:</p><p>{rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p></div>
+                <div className='rocket_info_container'><p>SPACECRAFT VOLUME:</p><p>{rocketData.pressurized_capsule.payload_volume.cubic_meters} M³ / {rocketData.pressurized_capsule.payload_volume.cubic_feet} FT³</p></div>
+                <div className='rocket_info_container'><p>RETURN PAYLOAD MASS:</p><p>{rocketData.return_payload_mass.kg} KG / {rocketData.return_payload_mass.lb} LBS</p></div>
             </div>
         </div>
         </>
